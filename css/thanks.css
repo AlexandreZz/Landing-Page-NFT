@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thanks {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0C061E;
+  position: relative;
+}
+
+.thanks h1 {
+  width: 70%;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 41px;
+  line-height: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

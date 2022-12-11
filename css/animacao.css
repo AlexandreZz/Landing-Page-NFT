@@ -12,8 +12,8 @@
 }
 
 .animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 /*the animation definition*/
@@ -21,25 +21,25 @@
   0% {
     -webkit-transform: translate3d(-100%, 0, 0) skewX(-40deg);
     transform: translate3d(-100%, 0, 0) skewX(-40deg);
-    opacity: 0
+    opacity: 0;
   }
 
   60% {
     -webkit-transform: skewX(30deg);
     transform: skewX(30deg);
-    opacity: 1
+    opacity: 1;
   }
 
   80% {
-    -webkit-transform: skewX(-5deg);
-    transform: skewX(-5deg);
-    opacity: 1
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+    opacity: 1;
   }
 
   100% {
     -webkit-transform: none;
     transform: none;
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -48,34 +48,34 @@
     -webkit-transform: translate3d(-100%, 0, 0) skewX(-40deg);
     -ms-transform: translate3d(-100%, 0, 0) skewX(-40deg);
     transform: translate3d(-100%, 0, 0) skewX(-40deg);
-    opacity: 0
+    opacity: 0;
   }
 
   60% {
     -webkit-transform: skewX(30deg);
     -ms-transform: skewX(30deg);
     transform: skewX(30deg);
-    opacity: 1
+    opacity: 1;
   }
 
   80% {
-    -webkit-transform: skewX(-5deg);
-    -ms-transform: skewX(-5deg);
-    transform: skewX(-5deg);
-    opacity: 1
+    -webkit-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+    opacity: 1;
   }
 
   100% {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
-    opacity: 1
+    opacity: 1;
   }
 }
 
 .lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
 }
