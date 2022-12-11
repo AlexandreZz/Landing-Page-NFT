@@ -22,7 +22,9 @@ const PreLoading = () => {
           clearInterval(timer);
           animacaoLight();
         }
-      }, 280);
+      }, 1);
+
+      // 200
     }
   };
 };
