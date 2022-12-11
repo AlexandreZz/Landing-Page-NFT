@@ -28,9 +28,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./img/favicon/android-chrome-512x512.png">
   </head>
-  <body id="hiddenOver">
+  <body style="overflow-x: hidden;">
 
     <div id="preloader" style="display:block;">
       <img style="margin-left:100px;" src="./img/Animacao/Loading.svg" alt="ANIMAÇÃO-PRELOADING" title="LOADING...">
@@ -44,21 +45,57 @@
       <!-- CIRCLE-->
       <div class="center">
         <div class="flex">
-          <a href="#home" class="checkPosition">
+          <a href="#home" class="checkPosition logoA">
             <div class="logo"></div>
           </a>
           <!--LOGO-->
 
           <nav class="desktop">
             <ul>
-              <li><a class="checkPosition activeBorder" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="#home">Home</a></li>
+              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="#home">Home</a></li>
               <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="#screenshot">Screenshot</a></li>
-              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="">Reviews</a></li>
-              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="">FAQ</a></li>
-              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="">Contato</a></li>
+              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="#reviews">Reviews</a></li>
+              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="#FAQ">FAQ</a></li>
+              <li><a class="checkPosition" onmouseover="ativaClass(this)" onmouseout="removeClass(this)" href="#contato">Contato</a></li>
             </ul>
           </nav>
           <!--DESKTOP-->
+
+          <nav class="mobile">
+            <ul class="flex">
+              <li>
+                <a class="checkPosition" href="#home">
+                  <img src="./img/mobile/home.png" alt="ICON-HOME" title="ICON-HOME">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a class="checkPosition" href="#screenshot">
+                  <img src="./img/mobile/scree.png" alt="ICON-SCREENSHOT" title="ICON-SCREENSHOT">
+                  Screen
+                </a>
+              </li>
+              <li>
+                <a class="checkPosition" href="#reviews">
+                  <img src="./img/mobile/reviews.png" alt="ICON-REVIEWS" title="ICON-REVIEWS">
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a class="checkPosition" href="#FAQ">
+                  <img src="./img/mobile/faq.png" alt="ICON-FAQ" title="ICON-FAQ">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a class="checkPosition" href="#contato">
+                  <img src="./img/mobile/contato.png" alt="ICON-CONTATO" title="ICON-CONTATO">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!--MOBILE-->
 
         </div>
         <!-- FLEX -->
@@ -67,23 +104,25 @@
     </header>
     <!--HEADER-->
 
-    <section class="home checkPreloader lightSpeedIn animated" id="home">
-      <div class="circle1"></div>
+    <section class="home checkPreloader lightSpeedIn animated" id="home" style="display:none;">
+      <div class="circle200" style="position:absolute;left:-77px;top:-10px;filter:blur(90px);"></div>
+      <!--CIRCLE250-->
       <div class="center">
         <div class="flex">
 
           <div class="apresentacao">
-            <div class="circle3"></div>
+            <div class="circle200" style="position:absolute;left:150px;top:220px;filter:blur(90px);"></div>
+            <!--CIRCLE250-->
             <h2 class="h2">Veja nossa coleção de
               <b>NFTs</b>
               disponíveis no aplicativo</h2>
             <p class="paragrafo">Venha conferir nossa coleção
               <b>NFTS</b>, o maior mercado digital do mundo para criptomoedas colecionáveis e tokens não fungíveis (<b>NFTs</b>).Compre, venda e descubra itens digitais exclusivos em nosso app disponível para Android e iOS.</p>
             <div class="flex botoesAppAndPlay">
-              <button class="PlayStore">
+              <button class="PlayStore" type="button">
                 <span style="position: relative;left:15px;">Play Store</span>
               </button>
-              <button class="AppStore">
+              <button class="AppStore" type="button">
                 <span style="position: relative;left:15px;">App Store</span>
               </button>
             </div>
@@ -94,7 +133,7 @@
           <div class="CardContainer">
             <div class="card1"></div>
             <!--CARD1-->
-            <div class="circle2"></div>
+            <div class="circle350"></div>
             <!-- CIRCLE2-->
           </div>
           <!--CARD1-->
@@ -107,29 +146,234 @@
     </section>
     <!-- HOME-->
 
-    <section class="Screenshot checkPreloader" id="screenshot">
-      <div class="center">
-        <h1 class="h1">SCREENSHOT</h1>
+    <section class="Screenshot checkPreloader checkVisible" id="screenshot" style="display:none;">
+      <div class="circle250" style="position:absolute;right:0;top:61px;filter:blur(100px);"></div>
+      <!--CIRCLE250-->
+      <div class="circle250" style="position:absolute;left:0;bottom:0;filter:blur(100px);"></div>
+      <!--CIRCLE250-->
 
-        <div class="slider">
-          <div class="imgSlide"></div>
-          <div class="imgSlide"></div>
-          <div class="imgSlide"></div>
-          <div class="imgSlide"></div>
-          <div class="imgSlide"></div>
-          <div class="imgSlide"></div>
-          <div class="imgSlide"></div>
+      <h1 class="h1">SCREENSHOT</h1>
+
+      <div class="slider">
+        <div class="imgSlide" id="ativo" style="order: 3;width: 350px;" onclick="sliderActive(this)" target="0">
+          <img src="./img/Slide/Card.png" alt="CARD-SLIDER" title="CARD-SLIDER">
         </div>
-        <!-- SLIDER -->
 
+        <div class="imgSlide" style="order: 2;width: 260px;" onclick="sliderActive(this)" target="1">
+          <img src="./img/Slide/Card (1).png" alt="CARD-SLIDER" title="CARD-SLIDER">
+        </div>
+
+        <div class="imgSlide" style="order: 4;width: 260px;" onclick="sliderActive(this)" target="2">
+          <img src="./img/Slide/Card (2).png" alt="CARD-SLIDER" title="CARD-SLIDER">
+        </div>
+
+        <div class="imgSlide" style="order: 1;width: 210px;" onclick="sliderActive(this)" target="3">
+          <img src="./img/Slide/Card (3).png" alt="CARD-SLIDER" title="CARD-SLIDER">
+        </div>
+
+        <div class="imgSlide" style="order: 5;width: 210px;" onclick="sliderActive(this)" target="4">
+          <img src="./img/Slide/Card (4).png" alt="CARD-SLIDER" title="CARD-SLIDER">
+        </div>
       </div>
-      <!--CENTER-->
+      <!-- SLIDER -->
+
+      <div class="leftAndRight " style="display:none;">
+        <span id="prev" onclick="sliderMobile(this)"></span>
+        <span id="next" onclick="sliderMobile(this)"></span>
+      </div>
     </section>
     <!-- SCREENSHOT-->
 
+    <section class="reviews checkPreloader checkVisible" id="reviews" style="display:none;">
+      <div class="circle250" style="position: absolute;top:-70px;right:20%;filter: blur(180px);"></div>
+      <div class="circle250" style="position: absolute;bottom:-50px;left:20%;filter: blur(170.5px);"></div>
+      <div class="center">
+        <h1 class="h1">REVIEWS</h1>
+
+        <div class="flex" style="margin:90px auto;">
+
+          <div class="one borderGradient">
+            <img src="./img/Ellipse/Ellipse 1.png" alt="AVATAR-1" title="AVATAR-1" style="margin: 40px auto 16px auto;">
+            <h5 class="h5">Claire</h5>
+            <p class="paragrafo">Estou amando minhas coleções de
+              <b>NFT</b>
+              no aplicativo.</p>
+            <img src="./img/Estrelas.png" alt="FEEDBACK" title="FEEDBACK" style="margin: 24px auto 29px auto;">
+          </div>
+          <!--ONE-->
+          <div class="two borderGradient">
+            <img src="./img/Ellipse/Ellipse 2.png" alt="AVATAR-2" title="AVATAR-2" style="margin: 40px auto 16px auto;">
+            <h5 class="h5">Greg</h5>
+            <p class="paragrafo">Amei as variações de
+              <b>NFT</b>
+              disponíveis no aplicativo</p>
+            <img src="./img/Estrelas (1).png" alt="FEEDBACK" title="FEEDBACK" style="margin: 24px auto 29px auto;">
+          </div>
+          <!--TWO-->
+          <div class="three borderGradient">
+            <img src="./img/Ellipse/Ellipse 3.png" alt="AVATAR-3" title="AVATAR-3" style="margin: 40px auto 16px auto;">
+            <h5 class="h5">Julie</h5>
+            <p class="paragrafo">Adorei o
+              <b>NFT</b>
+              que ganhei de graça ao me cadastrar no APP.</p>
+            <img src="./img/Estrelas (2).png" alt="FEEDBACK" title="FEEDBACK" style="margin: 24px auto 29px auto;">
+          </div>
+          <!--THREE-->
+
+        </div>
+        <!-- FLEX-->
+
+      </div>
+      <!---CENTER -->
+    </section>
+    <!-- REVIEWS-->
+
+    <section class="FAQ checkPreloader checkVisible" id="FAQ" style="display:none;">
+      <div class="circleFAQ" style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+      <div class="center">
+        <h1 class="h1">FAQ</h1>
+
+        <div
+          class="questionMain">
+          <!-- ONE -->
+          <div class="questionWraper" target="disabled">
+            <div class="questionTitle" style="border-top-left-radius: 12px;border-top-right-radius: 12px;">
+              <h6 class="left h6">O que são
+                <b>NFTs</b>?</h6>
+              <img class="right" src="./img/Plus.png" alt="closeQuestion" title="closeQuestion">
+              <div class="clear"></div>
+              <!--CLEAR-->
+            </div>
+            <!-- QUESTION TITLE-->
+
+            <div class="questionDescription questionDisabled">
+              <p class="paragrafo">Tokens não-intercambiáveis (NFT) são um registro digital da posse de determinado bem, seja ele real ou virtual, podendo representar imóveis, itens colecionáveis, uma medalha olímpica, um assento de um evento esportivo, ou até mesmo um post nas redes sociais.</p>
+            </div>
+            <!--QUESTION DESCRIPTION-->
+          </div>
+          <!--QUESTION WRAPER-->
+
+          <div class="questionWraper" target="disabled">
+            <div class="questionTitle">
+              <h6 class="left h6">Como Funciona?</h6>
+              <img class="right" src="./img/Plus.png" alt="closeQuestion" title="closeQuestion">
+              <div class="clear"></div>
+              <!--CLEAR-->
+            </div>
+            <!-- QUESTION TITLE-->
+            <div class="questionDescription questionDisabled">
+              <p class="paragrafo">De forma simplificada, NFTs são tokens gerados a partir de uma blockchain, da mesma forma que bitcoins, os NFTs são criados virtualmente e protegidos pela dinâmica de funcionamento da blockchain, sendo assim o registro não pode ser modificado, porque esse consenso inerente à blockchain garante a integridade e a exclusividade dos tokens gerados.</p>
+            </div>
+            <!--QUESTION DESCRIPTION-->
+          </div>
+          <!--QUESTION WRAPER-->
+
+          <div class="questionWraper" target="disabled">
+            <div class="questionTitle">
+              <h6 class="left h6">Qual a relação entre criptomoedas e os NFTs?</h6>
+              <img class="right" src="./img/Plus.png" alt="closeQuestion" title="closeQuestion">
+              <div class="clear"></div>
+              <!--CLEAR-->
+            </div>
+            <!-- QUESTION TITLE-->
+            <div class="questionDescription questionDisabled">
+              <p class="paragrafo">À primeira vista, não existe relação direta entre NFT e criptomoedas. Isso porque, enquanto o NFT é um token não fungível, isto é, que não pode ser negociado por outro igual, as criptomoedas são fungíveis. Por outro lado, embora o sistema desses ativos seja diferente, ambos estão baseados na tecnologia blockchain.</p>
+            </div>
+            <!--QUESTION DESCRIPTION-->
+          </div>
+          <!--QUESTION WRAPER-->
+
+          <div class="questionWraper" target="disabled">
+            <div class="questionTitle" style="border-bottom-left-radius: 12px;border-bottom-right-radius: 12px;">
+              <h6 class="left h6">Por que criar, comprar ou vender
+                <b>NFTS</b>?</h6>
+              <img class="right" src="./img/Plus.png" alt="closeQuestion" title="closeQuestion">
+              <div class="clear"></div>
+              <!--CLEAR-->
+            </div>
+            <!-- QUESTION TITLE-->
+            <div class="questionDescription questionDisabled">
+              <p class="paragrafo">Este mercado é considerado por muitos como uma próxima etapa de evolução quando o assunto é a criação de coleção de itens. Ou seja, acredita-se que ao longo do tempo muitas pessoas vão comprar NFTs para poder ter o acesso exclusivo a obras originais.</p>
+            </div>
+            <!--QUESTION DESCRIPTION-->
+          </div>
+          <!--QUESTION WRAPER-->
+        </div>
+        <!-- QUESTION MAIN-->
+      </div>
+      <!--CENTER-->
+    </section>
+    <!--FAQ-->
+
+    <section class="contato checkPreloader checkVisible" id="contato">
+      <div class="overlayC"></div>
+      <div class="center">
+        <h1 class="h1" style="margin-bottom:50px;">Contato</h1>
+
+        <div class="flex">
+
+          <form id="formulario" action="https://formsubmit.co/destinatariocrypto@gmail.com" method="POST">
+            <h3 class="h3">Entre em contato conosco</h3>
+            <div class="form-wraper">
+              <label for="name" class="paragrafo">Nome
+                <span class="redColor">*</span>
+              </label>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <!--FORM-WRAPER-->
+
+            <div class="form-wraper">
+              <label for="email" class="paragrafo">Email
+                <span class="redColor">*</span>
+              </label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <!--FORM-WRAPER-->
+
+            <div class="form-wraper">
+              <label for="message" class="paragrafo">Mensagem
+                <span class="redColor">*</span>
+              </label>
+              <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <!--FORM-WRAPER-->
+
+            <div class="form-wraper">
+              <button type="submit" class="paragrafo">Entrar</button>
+            </div>
+
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_cc" value="kalashnikov121582@gmail.com">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_subject" value="Novo email na caixa!">
+            <input type="hidden" name="_next" value="http://localhost/Landing%20Pages/Landing%20Page%20NFT/thanks.html">
+            <input type="hidden" name="_autoresponse" value="Olaaa!!! Tudo bem. Obrigado por entrar em contato conosco, em breve responderemos.">
+          <!-- MENSAGEM DE OBRIGADO -->
+            <!--FORM-WRAPER-->
+          </form>
+          <!--FORMULARIO-->
+
+          <div class="cardContato" style="margin-top:70px;">
+            <img src="./img/CardContato.png" alt="CARD-CONTATO" title="CARD-CONTATO">
+          </div>
+
+        </div>
+        <!--FLEX-->
+      </div>
+      <!--CENTER-->
+    </section>
+    <!-- CONTATO -->
+
+    <footer class="checkPreloader" style="display:none;">
+      <div class="circleAletorio" style="position: absolute;width: 148px;height: 50px;right: 30%;top: -29px;background: linear-gradient(90deg, #CC2B5E 0%, #753A88 100%);filter: blur(90px);"></div>
+      <p>Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="module" src="./js/app.js"></script>
     <script src="./js/Header.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
+    <script src="./js/SliderScreenshot.js"></script>
+    <script src="./js/checkVisibleLightSpeed.js"></script>
   </body>
-</html>
+</html></body></html>
