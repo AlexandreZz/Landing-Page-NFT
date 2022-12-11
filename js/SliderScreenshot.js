@@ -26,26 +26,16 @@ function sliderActive(event) {
   }
 }
 
-const srcImage = {
-  "0": "./img/Slide/Card.png",
-  "1": "./img/Slide/Card (1).png",
-  "2": "./img/Slide/Card (2).png",
-  "3": "./img/Slide/Card (3).png",
-  "4": "./img/Slide/Card (4).png",
-  count: 0
-};
+jQuery("#next").click(function() {
+  var principalTopo = jQuery(".slider div:last-of-type"); // copia o conteudo da última
 
-function sliderMobile(event) {
-  const max = divImgSlider.length - 1;
-  const min = 0;
+  jQuery(".slider div:last-of-type").remove(); // remove a última
+  jQuery(principalTopo).insertBefore(".slider div:first-of-type"); // insere antes da primeira
+});
 
-  if (event.id === "next") {
-    srcImage.count++;
-    srcImage.count > max ? (srcImage.count = max) : "";
-    divImgSlider[0].children[0].src = `${srcImage[srcImage.count]}`;
-  } else {
-    srcImage.count--;
-    srcImage.count < min ? (srcImage.count = min) : "";
-    divImgSlider[0].children[0].src = `${srcImage[srcImage.count]}`;
-  }
-}
+jQuery("#prev").click(function() {
+  var principalTheEnd = jQuery(".slider div:first-of-type"); // copia o conteudo da primeira
+
+  jQuery(".slider div:first-of-type").remove(); // remove a primeira
+  jQuery(principalTheEnd).insertAfter(".slider div:last-of-type"); // insere depois da última
+});
